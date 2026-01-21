@@ -16,6 +16,10 @@ DWM Enjoyer's First attempt at Hyprland Ricing.
 
 <img width="1920" height="1080" alt="7" src="https://github.com/user-attachments/assets/6c65dc87-508f-4737-b218-56c7af9b04a2" />
 
+
+https://github.com/user-attachments/assets/ac3b85d7-cb0f-437d-a11b-975492cd85ce
+
+
 ## Dependencies
    * Arch (btw)
    * Hyprland
