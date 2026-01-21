@@ -38,8 +38,8 @@ https://github.com/user-attachments/assets/ac3b85d7-cb0f-437d-a11b-975492cd85ce
 
 1. Clone the repo:
    ```bash
-   git clone [https://github.com/Tahsin404/Tahsin404-Hyprland.git](https://github.com/Tahsin404/Tahsin-Hyprland.git)
-   cd Tahsin-Hyprland
+   git clone https://github.com/Tahsin404/Tahsin404-Hyprland.git
+   cd Tahsin404-Hyprland
 
 2. Make install.sh executable and run
    ```bash
