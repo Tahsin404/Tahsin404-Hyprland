@@ -1,0 +1,49 @@
+/* The outer window */
+window {
+    margin: 10px;
+    border: 3px solid #dfdad2; /* Match your button color */
+    background-color: #958876; /* Dark background */
+    border-radius: 20px; /* The "Bubbly" roundness */
+}
+
+/* The search bar area */
+#input {
+    margin: 15px 10px 0px 10;
+    border: none;
+    color: #C5BAA8;
+    font-weight: bold;
+    font-family: "Monofur";
+    background-color: #413D38;
+    border-radius: 15px; /* Round input bar */
+}
+
+/* The list of apps */
+#inner-box {
+    margin: 0px 0px
+    padding: 0px 0px 10px 0px;
+    border: none;
+    background-color: transparent;
+}
+
+/* Individual App Entries */
+#entry {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 15px; /* Round apps */
+    border: none;
+}
+
+/* Target the icon inside the entry */
+#img {
+    margin: 0px 10px 0px 0px;
+    background-color: transparent;
+}
+
+/* When you select an app */
+#entry:selected {
+    background-color: #9c9893;
+    color: #958876;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.68);
+    font-size: 15px;
+    font-weight: bold;
+}

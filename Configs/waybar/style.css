@@ -1,0 +1,159 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+* {
+    font-family: "Monofur", monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* --- MODULE STYLES --- */
+#mpd,
+#pulseaudio,
+#clock,
+#network,
+#bluetooth,
+#custom-media {
+    /* FIX: fetched Pywal colors with 60% opacity for the "Frost" effect */
+    background-color: alpha(@background, 0.6);
+    
+    /* FIX: fetched pywal accent color for the border */
+    border: 3px solid alpha(@color1, 0.6);
+    
+    color: @foreground;
+    border-radius: 45px;
+    padding: 0 10px;
+    margin: 10px;
+}
+#custom-wofi {
+  background-color: alpha(@background, 0.6);
+  border: 3px solid alpha(@color1, 0.6);
+  border-radius: 45px;
+  margin: 10px 10px;
+  padding: 0px 12px 0px 7px;
+  color: @foreground;
+}
+/* --- WORKSPACES --- */
+#workspaces {
+    min-width: 283px;
+    
+    /* FIX: pywal colors into each workspaces */
+    background-color: alpha(@background, 0.6);
+    
+    /* FIX: Consistent border color matching other modules */
+      border: 3px solid alpha(@color10, 1);
+    
+    /* FIX: Added 'px' - this was breaking your rounded corners */
+    border-radius: 45px; 
+    margin: 10px;
+}
+
+#workspaces button {
+    padding: 0px;
+    margin: 5px 8px;
+    
+    /* Inactive buttons: slightly lighter dot */
+    background-color: alpha(@foreground, 0.2);
+    border: 3px solid transparent;
+    border-radius: 50%;
+    color: transparent;
+    
+    min-width: 25px;
+    min-height: 25px;
+    transition: all 0.3s linear;
+}
+
+#workspaces button.active {
+    /* FIX: Use accent color for active state */
+    background-color: @color1;
+    color: @background; /* Dark text on light button usually looks best */
+    
+    min-width: 45px;
+    border: 3px solid transparent;
+    
+    /* FIX: Added 'px' - critical for shape */
+    border-radius: 45px; 
+    
+    padding: 0px 9px 0px 6px;
+    transition: all 0.6s cubic-bezier(.55,-0.68,.48,1.68);
+}
+
+#workspaces button.urgent {
+    background-color: @color9; /* Usually red in Pywal */
+    color: @foreground;
+    min-width: 45px;
+    
+    /* FIX: Added 'px' */
+    border-radius: 45px;
+    
+    padding: 0px 12px;
+    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.68);
+}
+
+/* --- OTHER MODULES --- */
+#mode {
+    background-color: @background;
+    border-bottom: 3px solid @color1;
+}
+
+#clock,
+#network,
+#pulseaudio,
+#custom-media,
+#mpd {
+    color: @foreground;
+}
+
+#window {
+    margin: 0px 10px;
+}
+
+/* Margins for the split bar look */
+.modules-center > widget:first-child > #workspaces {
+    padding-left: 21px; /* Added px */
+    padding-right: 10px; /* Added px */
+}
+
+#network.disconnected {
+    background-color: @color9; /* Red */
+}
+
+#custom-power {
+    /* Use accent color but very transparent */
+    background-color: alpha(@color1, 0.2);
+    border: 3px solid alpha(@color1, 0.6);
+    border-radius: 50%;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0px 0px 0px 2px;
+    color: @background; /* Red icon */
+    margin: 10px;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        margin-top: -20px;    }
+    to {
+        opacity: 1;
+        margin-top: 0px;    }
+}
+
+tooltip {
+    background-color: alpha(@background, 0.9);
+    border: 3px solid alpha(@color1, 0.6);
+    border-radius: 35px;
+    padding: 20px; 
+    animation-name: slide-down; 
+    animation-duration: 0.5s; 
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
