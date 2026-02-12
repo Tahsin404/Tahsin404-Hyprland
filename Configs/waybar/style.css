@@ -43,7 +43,7 @@ window#waybar.hidden {
 }
 /* --- WORKSPACES --- */
 #workspaces {
-    min-width: 283px;
+    min-width: 290px;
     
     /* FIX: pywal colors into each workspaces */
     background-color: alpha(@background, 0.6);
@@ -58,7 +58,7 @@ window#waybar.hidden {
 
 #workspaces button {
     padding: 0px;
-    margin: 5px 8px;
+    margin: 5px 10px;
     
     /* Inactive buttons: slightly lighter dot */
     background-color: alpha(@foreground, 0.2);
@@ -82,7 +82,7 @@ window#waybar.hidden {
     /* FIX: Added 'px' - critical for shape */
     border-radius: 45px; 
     
-    padding: 0px 100px 0px 6px;
+    padding: 0px 9px 0px 6px;
     transition: all 0.6s cubic-bezier(.55,-0.68,.48,1.68);
 }
 
