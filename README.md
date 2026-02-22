@@ -10,7 +10,8 @@ A clean, bouncy, Hyprland setup for Arch Linux.
 
 ## Installation
 
-1. Clone the repo:
+1. Clone the repo and install necessary files:
    ```bash
    git clone [https://github.com/Tahsin404/Tahsin-Hyprland.git](https://github.com/Tahsin404/Tahsin-Hyprland.git)
    cd Tahsin-Hyprland
+   ./install.sh
